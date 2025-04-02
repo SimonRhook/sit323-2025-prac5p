@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    container_name: web_calc
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
